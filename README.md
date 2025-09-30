@@ -1,7 +1,7 @@
 # Computer Vision Homework
 
 Ajou University · Fall 2025  
-Instructor: [교수님 성함 (선택)]  
+Instructor: Shin Hyeonjun
 Student: Kim Minchae
 
 This repository contains assignments for the **Computer Vision** course, implemented using **C++** and **OpenCV**.
