@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		492F65E72E8BAB0E00DCD6AE /* libopencv_core.4.11.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F65E62E8BAB0E00DCD6AE /* libopencv_core.4.11.0.dylib */; };
+		492F65E92E8BAB2600DCD6AE /* libopencv_highgui.4.11.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F65E82E8BAB2600DCD6AE /* libopencv_highgui.4.11.0.dylib */; };
+		492F65EB2E8BAB3400DCD6AE /* libopencv_imgproc.4.11.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F65EA2E8BAB3400DCD6AE /* libopencv_imgproc.4.11.0.dylib */; };
+		492F65ED2E8BAB4200DCD6AE /* libopencv_imgcodecs.4.11.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 492F65EC2E8BAB4200DCD6AE /* libopencv_imgcodecs.4.11.0.dylib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		492F65D92E8BAA5A00DCD6AE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		492F65DB2E8BAA5A00DCD6AE /* computer_vision */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = computer_vision; sourceTree = BUILT_PRODUCTS_DIR; };
+		492F65E62E8BAB0E00DCD6AE /* libopencv_core.4.11.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.4.11.0.dylib; path = ../../../../opt/homebrew/Cellar/opencv/4.11.0_1/lib/libopencv_core.4.11.0.dylib; sourceTree = "<group>"; };
+		492F65E82E8BAB2600DCD6AE /* libopencv_highgui.4.11.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.4.11.0.dylib; path = ../../../../opt/homebrew/Cellar/opencv/4.11.0_1/lib/libopencv_highgui.4.11.0.dylib; sourceTree = "<group>"; };
+		492F65EA2E8BAB3400DCD6AE /* libopencv_imgproc.4.11.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.4.11.0.dylib; path = ../../../../opt/homebrew/Cellar/opencv/4.11.0_1/lib/libopencv_imgproc.4.11.0.dylib; sourceTree = "<group>"; };
+		492F65EC2E8BAB4200DCD6AE /* libopencv_imgcodecs.4.11.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgcodecs.4.11.0.dylib; path = ../../../../opt/homebrew/Cellar/opencv/4.11.0_1/lib/libopencv_imgcodecs.4.11.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,6 +46,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492F65ED2E8BAB4200DCD6AE /* libopencv_imgcodecs.4.11.0.dylib in Frameworks */,
+				492F65EB2E8BAB3400DCD6AE /* libopencv_imgproc.4.11.0.dylib in Frameworks */,
+				492F65E92E8BAB2600DCD6AE /* libopencv_highgui.4.11.0.dylib in Frameworks */,
+				492F65E72E8BAB0E00DCD6AE /* libopencv_core.4.11.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				492F65DD2E8BAA5A00DCD6AE /* computer_vision */,
+				492F65E52E8BAB0E00DCD6AE /* Frameworks */,
 				492F65DC2E8BAA5A00DCD6AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +71,17 @@
 				492F65DB2E8BAA5A00DCD6AE /* computer_vision */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		492F65E52E8BAB0E00DCD6AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				492F65EC2E8BAB4200DCD6AE /* libopencv_imgcodecs.4.11.0.dylib */,
+				492F65EA2E8BAB3400DCD6AE /* libopencv_imgproc.4.11.0.dylib */,
+				492F65E82E8BAB2600DCD6AE /* libopencv_highgui.4.11.0.dylib */,
+				492F65E62E8BAB0E00DCD6AE /* libopencv_core.4.11.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +273,15 @@
 		492F65E32E8BAA5A00DCD6AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = computer_vision/computer_vision.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPZYU2DRYF;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /opt/homebrew/include/opencv4;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/opencv/4.11.0_1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -256,9 +289,15 @@
 		492F65E42E8BAA5A00DCD6AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = computer_vision/computer_vision.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPZYU2DRYF;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /opt/homebrew/include/opencv4;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/opencv/4.11.0_1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
