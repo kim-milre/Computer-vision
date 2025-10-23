@@ -93,7 +93,9 @@ Detect coins in an image using the Hough Circle Transform, and draw circles arou
 7. Display or save the annotated result
 
 **Result Preview:**
-<img width="700" height="588" alt="output" src="https://github.com/user-attachments/assets/e42a1e43-ebea-40b1-a02e-32cce6ee3d31" />
+<p align="center">
+<img src="HW2_HoughCircleDetector/output.png" width="400"/>
+</p>
 
 The result highlights each coin with a red circle and marks the center with a green dot.
 
